@@ -1,0 +1,102 @@
+/*Tamanho de tela DE CELULARES*/
+@media screen and (max-width: 767px) { 
+    .container {
+    width: 100%;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  .section {
+    padding: 20px;
+  }
+}
+
+/*Tamnho de tela DE TABLETS*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container {
+        width: 90%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      h1 {
+        font-size: 32px;
+      }
+      
+      p {
+        font-size: 18px;
+      }
+      
+      .section {
+        padding: 40px;
+      }      
+}
+
+/*Tamanho de tela DE NOTEBOOKS*/
+@media screen and (min-width: 1024px) and (max-width: 1365px){
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      h1 {
+        font-size: 40px;
+      }
+      
+      p {
+        font-size: 20px;
+      }
+      
+      .section {
+        padding: 60px;
+      }      
+}
+
+/*Tamanho de tela DE COMPUTADORES*/
+@media screen and (min-width: 1366px){
+    .container {
+        width: 70%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      h1 {
+        font-size: 48px;
+      }
+      
+      p {
+        font-size: 22px;
+      }
+      
+      .section {
+        padding: 80px;
+      }
+      
+}

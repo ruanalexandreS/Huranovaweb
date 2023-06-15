@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Huranova | Official Website</title>
+	<!--CSS-->
+	<link rel="stylesheet" href="src/css/style.css">
+	<link rel="stylesheet" href="src/css/reset.css">
+	<link rel="stylesheet" href="src/css/responsivo.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!--FONTE-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<!--ICONE-->
+	<link rel="shortcut icon" href="src/img/icone.png" type="image/x-icon">
+	<!--JAVASCRIPT-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>HURANOVA</h1>
+		<div class="cabecalho">
+		  <nav>
+			<ul>
+				<li><a href="#ad" class="ad">Songs</a></li>
+				<li><a href="#vd" class="vd">Video</a></li>
+				<li><a href="#sn" class="sn">About Us</a></li>
+				<li><a href="#ct" class="ct">Contact</a></li>
+				<li><a href="https://huranovastore.bigcartel.com" class="ct">Shop</a></li>
+			 </ul>
+		 </nav>
+		</div>
+	</header>
+
+	<img src="src/img/S_IMG_2075_BANNER.png" class="banner">
+
+	<section class="sobre-nos" id="sn">
+			<h2>About Us</h2>
+			<p class="sobre_nos">HURANOVA were born in 2017. They released their first single "Go With The Devil" in July 2018 and shortly after they recorded their debut album "Allowed To Demand Aloud", which was released in October 2019; the album contains 10 hard n' heavy oriented tracks. After promoting their first album with a short tour in the Northern Italy, they started to reimagine their sound and their compositional approach.<br>
+				They joined the big family of Superbia Music and they began to reinvent their image and their musical identity, both focusing on their sound and their songwriting, moving towards modern metal. Thanks to this "rebirth", they released three singles, "Need", "Loss Of Me" and "Shape", which met with good success both in Italy and abroad. They also reinterpreted a well-known hit, “Somebody Told Me” by The Killers, from an alternative metal viewpoint. Now the band is writing their second album, while doing their best to come back touring as soon as possible.
+			</p>
+	</section>
+	<section class="contato" id="ct">
+		<div class="form-box">
+			<div class="form-value">
+				<h2>Contact</h2>
+				<form action="mailto:santosairton31508@gmail.com" method="post">
+					<label for="nome">Name:</label>
+					<input type="text" id="nome" name="name" required>
+
+					<label for="email">E-mail:</label>
+					<input type="email" id="email" name="email" required>
+
+					<label for="mensagem">Message:</label>
+					<textarea id="mensagem" name="mensagem" required></textarea>
+
+					<button type="submit" class="btn">Enviar</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section id="vd" class="background"><h1 class="Canzoni">Videos</h1>
+		<div  class="container">
+		<div class="video video1">
+			<iframe class="v1" width="560" height="315" src="https://www.youtube.com/embed/LylgX7FkOsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<p class="text1">HURANOVA - Shape (Official Music Video)</p>
+		</div>
+		<div class="video video2">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/7uRA_MWrMS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<p class="text2">HURANOVA - Need (Official Music Video)</p>
+		</div>
+		<div class="video video3">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/NU4rTdboNZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<p class="text3"> Huranova - Loss Of Me (Official Lyric Video)</p>
+		</div>
+		</div>
+	</section>
+	<section class="audio" id="ad">
+		<div class="animated-background">
+			<div class="container_2">
+				<div class="body2">
+					<div class="player">
+						<div class="imgbox">
+							<img src="src/img/MicPlayer.png" alt="micplayer">
+						</div>
+
+						<audio class="audio-player" id="audio-player">
+							<source src="src/audio/music1.mp4" type="audio/mp3">
+							<source src="src/audio/music2.mp4" type="audio/mp3">
+							<source src="src/audio/music3.mp4" type="audio/mp3">
+						</audio>
+
+						<div class="audiop">
+							<button  id="prev-button"><i class="fas fa-step-backward"></i></button>
+							<button id="play-button"><i class="material-icons">play_arrow</i></button>
+							<button id="pause-button"><i class="material-icons">pause</i></button>
+							<button id="next-button"><i class="fas fa-step-forward"></i></button>
+							<progress id="progress-bar" value="0" max="100"></progress>
+							<input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+
+						</div>
+					<script>
+						const audioPlayer = document.getElementById('audio-player');
+						const prevButton = document.getElementById('prev-button');
+						const playButton = document.getElementById('play-button');
+						const pauseButton = document.getElementById('pause-button');
+						const nextButton = document.getElementById('next-button');
+						const progressBar = document.getElementById('progress-bar');
+  						const volumeSlider = document.getElementById('volume-slider');
+						
+						
+						let currentTrack = 0;
+						const tracks = audioPlayer.getElementsByTagName('source');
+						
+						function playTrack() {
+						  audioPlayer.src = tracks[currentTrack].src;
+						  audioPlayer.play();
+						}
+						
+						playButton.addEventListener('click', () => {
+							audioPlayer.play();
+							playButton.style.display = 'none';
+							pauseButton.style.display = 'inline-block';
+						  });
+						  
+						pauseButton.addEventListener('click', () => {
+							audioPlayer.pause();
+							pauseButton.style.display = 'none';
+							playButton.style.display = 'inline-block';
+						});
+
+						prevButton.addEventListener('click', () => {
+						  currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+						  playTrack();
+						});
+						
+						nextButton.addEventListener('click', () => {
+						  currentTrack = (currentTrack + 1) % tracks.length;
+						  playTrack();
+						});
+
+						audioPlayer.addEventListener('timeupdate', () => {
+							const currentTime = audioPlayer.currentTime;
+							const duration = audioPlayer.duration;
+						
+							const progressPercentage = (currentTime / duration) * 100;
+							progressBar.value = progressPercentage;
+						  });
+
+						  volumeSlider.addEventListener('input', () => {
+							audioPlayer.volume = volumeSlider.value;
+						  });
+
+						  progressBar.addEventListener('click', (event) => {
+							const selectedTime = (event.offsetX / progressBar.clientWidth) * audioPlayer.duration;
+							audioPlayer.currentTime = selectedTime;
+						  });
+					  </script>
+
+					  
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+
+	</section>
+	<footer class="footer">
+		<div>
+			<img class="logo_footer" src="src/img/logo.png">
+			<div class="icon-container">
+				<a href="https://www.instagram.com/huranovaofficial/">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="https://www.facebook.com/HuranovaOfficial/">
+					<i class="fab fa-facebook"></i>
+				</a>
+				<a href="https://www.youtube.com/user/HuranovaTV">
+					<i class="fab fa-youtube"></i>
+				</a>
+			  	<a href="https://twitter.com/huranovaband">
+					<i class="fab fa-twitter"></i>
+			  	</a>
+			  	<a href="https://open.spotify.com/intl-pt/artist/0TLE62m2QDfAAKBhyt5RCk?si=cdDFCoNOTvyrr5GP_yaDag">
+					<i class="fab fa-spotify"></i>
+			  	</a>
+				  <p>Copyright© 2023 all rights reserved- website by:<a class="link" href="https://github.com/Airton-J">Airton_S</a>  &  <a href="https://github.com/ruanalexandreS">Ruan_Alexandre</a></p>
+			</div>
+		</div>
+	</footer>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+
+</html>
